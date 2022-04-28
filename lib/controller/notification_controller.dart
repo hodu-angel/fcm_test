@@ -1,4 +1,3 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:get/get.dart';
 
@@ -17,7 +16,7 @@ class NotificationController extends GetxController{
   void _initNotification() async{
     //권한 설정
     NotificationSettings settings = await _messaging.requestPermission(
-      provisional: true,
+      //provisional: true,
     );
     print('User granted permission: ${settings.authorizationStatus}');
 
